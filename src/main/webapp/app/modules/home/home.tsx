@@ -46,8 +46,9 @@ export const Home = (props: IHomeProp) => {
 
   const classes = useStyles();
 
-  React
   const[newTask, setNewTask] = useState('');
+
+
   const handleSubmit = (e: FormElement) => {
     e.preventDefault();
   }
@@ -77,9 +78,21 @@ export const Home = (props: IHomeProp) => {
                 {row.name}
               </TableCell>
               <TableCell align="right">{row.calories}</TableCell>
+              <form onSubmit={handleSubmit}>
+                <button>Enviar</button>
+              </form>
               <TableCell align="right">{row.fat}</TableCell>
+                <form onSubmit={handleSubmit}>
+                  <button>Enviar</button>
+                </form>
               <TableCell align="right">{row.carbs}</TableCell>
+                <form onSubmit={handleSubmit}>
+                  <button>Enviar</button>
+                </form>
               <TableCell align="right">{row.protein}</TableCell>
+                <form onSubmit={handleSubmit}>
+                  <button>Enviar</button>
+                </form>
             </TableRow>
           ))}
         </TableBody>
